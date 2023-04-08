@@ -2,11 +2,11 @@
 #------------------------------------------------------------------------------------------------
 # Find Exploit (findxpl.sh)                                                                      |
 # Author: Rafael (rlim0x61)                                                                      |
-# Date: 04/05/2023 (mm/dd/yyyy)                                                                  |
+# Date: 04/08/2023 (mm/dd/yyyy)                                                                  |
 # Description: reads dpkg -l | rpm -qa output and lists known exploits related to each package.  |
 # Usage: ./findxpl.sh [package-list] [Exploit title] ['term|to|be|searched']                     |
 # ./findxpl [package-list.txt] ['Privilege Escalation'] ['Linux | Apache 2.4.10']                |
-# Version: 1.0                                                                                   |
+# Version: 1.0.1                                                                                   |
 #-------------------------------------------------------------------------------------------------
 
 #BASH COLLORS
@@ -41,7 +41,9 @@ then
 else
    mkdir exploits
    echo ""
-   echo -e "${BOLDGREEN}[+] Starting exploit searching ${ENDCOLLOR}..."
+   echo "[Start]"
+   echo ""
+   echo -e "${BOLDGREEN}[+] Searching for exploits ...${ENDCOLLOR}"
    echo ""
    sleep 2
    for pkg in $(cat $1 | awk '{print $2}');
@@ -53,9 +55,20 @@ else
    do 
    rm -rf exploits/$emptyFile
    done
+   #Summary
+   exploitsByPackage=`ls -l exploits/ |wc -l`
+   totalExploits=`cat exploits/* |wc -l`
    #End banner
    echo ""
-   echo -e "${BOLDGREEN}[*] Package with possible exploits listed at $(pwd)/exploits${ENDCOLLOR}. Take a look!"
+   echo "[Summary]"
    echo ""
-   echo -e "${RED}<<${ENDCOLLOR}END${RED}>>${ENDCOLLOR}"
+   echo "|---------------------------------------------------|"
+   echo "| [*] Exploit list created at $(pwd)/exploits |"
+   echo "|---------------------------------------------------|"
+   echo -e "|${BOLDGREEN} [+] Packages with exploits: $exploitsByPackage ${ENDCOLLOR}                    |"
+   echo "|---------------------------------------------------|"
+   echo -e "|${RED} [++] Total exploits: $totalExploits ${ENDCOLLOR}                           |"
+   echo "|---------------------------------------------------|"
+   echo ""
+   echo "[END]"
 fi
