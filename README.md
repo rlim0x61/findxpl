@@ -8,9 +8,9 @@ This is just a script to find exploit codes. It doesn't make anything further. H
 Therefore you must only use this script in IT assets' vulnerability tests or analysis for which you have proper and formal authorization from its owners. 
 
 # findxpl.sh checksum
-MD5SUM: 4cedb8da33bdec59b9bd7a0fe4a49e26  findxpl.sh // 
-SHA1SUM: 474884c05230d4ab9fb19980ae8c04ebe880e9e7  findxpl.sh //
-SHA256SUM: c7fe10f863c8eb80fe0130c81fd665fd8e81af1f95e086790c17b735d36f2219  findxpl.sh 
+MD5SUM: 2d5dec1e20a864be7afb284c32462249  findxpl.sh // 
+SHA1SUM: afa46ac24b52050ae6e512fa5f3c9f4459a551a0  findxpl.sh //
+SHA256SUM: 79dc1fff9db80bbf6c7f4680efde01cbf0d7422d1b635fa692729ee6c651a6d9  findxpl.sh 
 
 # Description
 
