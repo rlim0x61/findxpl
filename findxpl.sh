@@ -6,7 +6,7 @@
 # Description: reads dpkg -l | rpm -qa output and lists known exploits related to each package.  |
 # Usage: ./findxpl.sh [package-list] [Exploit title] ['term|to|be|searched']                     |
 # ./findxpl [package-list.txt] ['Privilege Escalation'] ['Linux | Apache 2.4.10']                |
-# Version: 1.0.1                                                                                   |
+# Version: 1.0.1                                                                                 |
 #-------------------------------------------------------------------------------------------------
 
 #BASH COLLORS
