@@ -41,6 +41,7 @@ $./findxpl.sh [package-list.txt] ['Remote Code Execution'] ['Linux | Apache 2.4.
 [*] Either the 'Exploit title' and the 'terms|to|be|searched' need to be passed always between single quotes as shown above.
 
 ![image](https://user-images.githubusercontent.com/39169975/230729665-60d3a69e-2679-4252-96d4-40b298502fc1.png)
+
 ![image](https://user-images.githubusercontent.com/39169975/230729693-c483d4e5-004a-497e-afef-1142d1dd138a.png)
 
 # Output
